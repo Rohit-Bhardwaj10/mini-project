@@ -24,7 +24,7 @@ The website is deployed using GitHub Pages and can be accessed at .
 
 To run the project locally:
 
-1. Clone this repository: `git clone https://github.com/Alkaison/Health-Plus.git`
+1. Clone this repository: `git clone https://github.com/Rohit-Bhardwaj10/mini-project.git`
 2. Navigate to the project directory: `cd Health-Plus`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
