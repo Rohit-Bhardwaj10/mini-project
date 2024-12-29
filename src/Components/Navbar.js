@@ -21,7 +21,7 @@ function Navbar() {
 
   const Logout =()=>{
     localStorage.removeItem('user')
-    window.location.href="/Health-Plus/login"
+    window.location.href="/login"
     toast.success("Logout successfully!")
   }
 

@@ -12,7 +12,7 @@ import SignUp from "./Components/SignUp";
 function App() {
   return (
     <div className="App">
-      <Router basename="/Health-Plus">
+      <Router basename="/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />
