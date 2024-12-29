@@ -18,6 +18,7 @@ function AppointmentForm() {
   const [preferredMode, setPreferredMode] = useState("default");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [patientEmail, setPatientEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,6 +53,12 @@ function AppointmentForm() {
       errors.preferredMode = "Please select preferred mode";
     }
 
+    if (!patientEmail.trim()) {
+      errors.patientEmail = "Patient email is required";
+    } else if (!/\S+@\S+\.\S+/.test(patientEmail)) {
+      errors.patientEmail = "Please enter a valid email address";
+    }
+
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
@@ -66,7 +73,8 @@ function AppointmentForm() {
         appointmentTime: new Date(appointmentTime).toISOString(), // Convert to ISO string
         preferredMode: preferredMode,
         createdAt: new Date().toISOString(), // Convert to ISO string
-        status: 'pending'
+        status: 'pending',
+        patientEmail: patientEmail.trim(),
       };
 
       // Validate data before sending to Firestore
@@ -80,11 +88,19 @@ function AppointmentForm() {
         const docRef = await addDoc(appointmentsRef, appointmentData);
         console.log("Appointment saved with ID: ", docRef.id);
 
-        // Send email only after successful database write
-        await emailjs.sendForm(
+        // Create a template params object for EmailJS
+        const templateParams = {
+          to_email: patientEmail,
+          patient_name: patientName,
+          appointment_time: new Date(appointmentTime).toLocaleString(),
+          preferred_mode: preferredMode
+        };
+
+        // Update EmailJS send method
+        await emailjs.send(
           'service_izj2af6',
           'template_u2qug0h',
-          e.target,
+          templateParams,
           'WDbyNCDI5NCflGOq0'
         );
 
@@ -94,6 +110,7 @@ function AppointmentForm() {
         setPatientGender("default");
         setAppointmentTime("");
         setPreferredMode("default");
+        setPatientEmail("");
         setFormErrors({});
 
         toast.success("Appointment Scheduled !", {
@@ -199,11 +216,24 @@ function AppointmentForm() {
           </label>
 
           <br />
+          <label>
+            Patient Email:
+            <input
+              type="email"
+              name="patient_email"
+              value={patientEmail}
+              onChange={(e) => setPatientEmail(e.target.value)}
+              required
+            />
+            {formErrors.patientEmail && <p className="error-message">{formErrors.patientEmail}</p>}
+          </label>
+
+          <br />
           <button type="submit" className="text-appointment-btn">
             Confirm Appointment
           </button>
 
-          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Appointment details has been sent to the patients phone number via SMS.</p>
+          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Appointment details has been sent to the patients email.</p>
         </form>
       </div>
 
