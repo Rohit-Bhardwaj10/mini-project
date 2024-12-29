@@ -1,8 +1,8 @@
 {
-  "name": "health-plus",
+  "name": "curetica",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alkaison.github.io/Health-Plus/",
+  "homepage": "https://github.com/Rohit-Bhardwaj10/mini-project",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -47,8 +47,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
     "gh-pages": "^5.0.0",
-    "react-router-dom": "^6.28.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.0"
+    "react-router-dom": "^6.28.1"
   }
 }
