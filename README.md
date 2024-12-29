@@ -1,11 +1,10 @@
-# Health Plus
+# Curetica 
 
-Welcome to the Health Plus project repository! This is a React-based website aimed at providing accessible and personalized healthcare services to users. The website allows users to connect with expert doctors, schedule appointments, and receive expert medical advice.
+Welcome to the Curetica  project repository! This is a React-based website aimed at providing accessible and personalized healthcare services to users. The website allows users to connect with expert doctors, schedule appointments, and receive expert medical advice.
 
 ## Project Overview
 
-- **Website**: [curetica Healthcare](https://alkaison.github.io/Health-Plus/ "curetica Healthcare")
-- **Framework**: React.js
+- **Website**: [curetica Healthcare]
 - **Deployment**: GitHub Pages
 - **Libraries**: React-Toastify, React Router DOM, FontAwesomeIcon
 
@@ -17,47 +16,9 @@ Welcome to the Health Plus project repository! This is a React-based website aim
 - Utilizes React-Toastify for notifications, React Router DOM for page routing, and FontAwesomeIcon for icons.
 - Deployed using GitHub Pages for easy access and sharing.
 
-## Screenshots
-
-### Hero Section
-
-![Curetica-Healthcare Image-1](https://i.postimg.cc/0Q4839KN/Health-Plus-Image1.png)
-
-### Information Section
-
-![Curetica-Healthcare Image-2](https://i.postimg.cc/zvRJY4TF/Health-Plus-Image2.png)
-
-### About Section
-
-![Curetica-Healthcare Image-3](https://i.postimg.cc/8zGrwbV0/Health-Plus-Image3.png)
-
-### Why Choose Health Plus?
-
-![Curetica-Healthcare Image-4](https://i.postimg.cc/fknMz5Kn/Health-Plus-Image4.png)
-
-### Reviews Section
-
-![Curetica-Healthcare Image-5](https://i.postimg.cc/xjkHdCRt/Health-Plus-Image5.png)
-
-### Doctors Section
-
-![Curetica-Healthcare Image-6](https://i.postimg.cc/8PM6h0xv/Health-Plus-Image6.png)
-
-### Footer Section
-
-![Curetica-Healthcare Image-7](https://i.postimg.cc/sftWGrHy/Health-Plus-Image7.png)
-
-### Legal Documents Page
-
-![Curetica-Healthcare Image-8](https://i.postimg.cc/FKskXszb/Health-Plus-Image8.png)
-
-### Appointment Form Page
-
-![Curetica-Healthcare Image-9](https://i.postimg.cc/2SxLtBk8/Health-Plus-Image9.png)
-
 ## Deployment
 
-The website is deployed using GitHub Pages and can be accessed at [https://alkaison.github.io/Health-Plus/](https://alkaison.github.io/Health-Plus/).
+The website is deployed using GitHub Pages and can be accessed at .
 
 ## Getting Started
 
