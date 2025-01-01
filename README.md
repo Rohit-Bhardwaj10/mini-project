@@ -18,7 +18,7 @@ Welcome to the Curetica  project repository! This is a React-based website aimed
 
 ## Deployment
 
-The website is deployed using GitHub Pages and can be accessed at [https://rohit-bhardwaj10.github.io/mini-project](https://rohit-bhardwaj10.github.io/mini-project)
+The website is deployed using GitHub Pages and can be accessed at [https://curetica.vercel.app/]
 
 ## Getting Started
 
